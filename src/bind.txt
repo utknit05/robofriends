@@ -1,0 +1,35 @@
+1. this.handleChange.bind(this);
+
+2. constructor(){
+	this.handleChange = this.handleChange.bind(this);  
+}
+
+3. { (e) => this.handleChange(e) }  //basically it is returning a callback function
+
+4. use arrow functions
+
+------let handleChange(items,e)  has arguments then-------
+
+5. this.handleChange = this.handleChange.bind(this,items)
+
+6. bind it in constructor and use :
+   this.handleChange = this.handleChange.bind(undefined,items)
+
+7. define it as
+   handleChange => (items) => (e) => {.....}
+
+NOTE : binding using (4) is static and cann't be rebind
+       whereas
+       binding is dynamic when done using .bind(this) command. 
+
+
+
+----------------------------------------------------------------------------------------
+-----------LINK FOR WHY WE NEED TO SPECIFY THE props arguments WITH THE constructor() & super()---------------------------
+NOTE : https://stackoverflow.com/questions/30571875/whats-the-difference-between-super-and-superprops-in-react-when-using-e
+----------------------------------------------------------------------------------------
+
+
+
+Use command+control+g to have multiple cursors.
+
